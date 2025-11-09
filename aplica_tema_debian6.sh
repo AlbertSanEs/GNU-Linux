@@ -31,6 +31,6 @@ echo "📁 Còpia de seguretat creada a: $BACKUP"
 sudo sed -i '/^#\?background=/d' "$CONFIG"
 
 # Afegeix la nova línia al final
-echo "background=\"$IMATGE\"" | sudo tee -a "$CONFIG" > /dev/null
+echo "background=$IMATGE" | sudo tee -a "$CONFIG" > /dev/null
 
 echo "✅ Línia background actualitzada amb la imatge SVG."
