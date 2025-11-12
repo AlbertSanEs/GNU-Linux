@@ -39,23 +39,24 @@ echo "✅ Línia background actualitzada amb la imatge SVG."
 
 
 # Per a revisar si funciona correctament.
+IMATGEBLOC="/usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg"
 
 # Ruta de la imatge (canvia-ho pel teu camí)
-IMATGE="$1"
+IMATGEBLOC="$1"
 
 # Comprova si la imatge existeix
-if [ ! -f "$IMATGE" ]; then
-  echo "⚠️ La imatge no existeix: $IMATGE"
+if [ ! -f "$IMATGEBLOC" ]; then
+  echo "⚠️ La imatge no existeix: $IMATGEBLOC"
   exit 1
 fi
 
 # Estableix la imatge com a fons d'escriptori (que MATE Screensaver utilitza)
-gsettings set org.mate.background picture-filename "$IMATGE"
+gsettings set org.mate.background picture-filename "$IMATGEBLOC"
 
 # Opcional: assegura que MATE Screensaver utilitza el fons d'escriptori
 gsettings set org.mate.screensaver use-theme-background true
 
-echo "✅ Imatge de bloqueig configurada amb: $IMATGE"
+echo "✅ Imatge de bloqueig configurada amb: $IMATGEBLOC"
 
 
 
