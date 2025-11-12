@@ -8,6 +8,9 @@ gsettings set org.mate.interface gtk-theme 'TraditionalOk'
 gsettings set org.mate.Marco.general theme 'TraditionalOk'
 gsettings set org.mate.interface icon-theme 'gnome'
 gsettings set org.mate.background picture-filename /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg
+gsettings set org.mate.screensaver picture-filename /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg
+
+
 
 
 # Establim la ruta de la imatge del login
@@ -84,4 +87,3 @@ echo "✅ Imatge del login actualizada."
 echo "GRUB_BACKGROUND=$GRUBIMATGE" | sudo tee -a "$GRUBCONFIG" > /dev/null
 sudo os-prober && sudo update-grub2 > /dev/null
 echo "✅ Imatge del Grub actualitzada."
-
